@@ -22,11 +22,11 @@ public class SceneCreator : MonoBehaviour
                 var scale = tissueBlock.transform.localScale;
                 var tempMatrix = Matrix4x4.TRS(position, rotation, scale);
 
-                Debug.Log("Before:");
-                Debug.Log(position);
-                Debug.Log(rotation);
-                Debug.Log(scale);
-                Debug.Log(tempMatrix);
+                // Debug.Log("Before:");
+                // Debug.Log(position);
+                // Debug.Log(rotation);
+                // Debug.Log(scale);
+                // Debug.Log(tempMatrix);
 
                 Matrix4x4 matrix = CreateMatrix(node);
                 Debug.Log(node.entityId);
@@ -35,12 +35,12 @@ public class SceneCreator : MonoBehaviour
                 rotation = matrix.ExtractRotation();
                 scale = matrix.ExtractScale();
 
-                Debug.Log("After:");
-                Debug.Log(position);
-                Debug.Log(rotation);
-                Debug.Log(scale);
-                Debug.Log(tempMatrix);
-                
+                // Debug.Log("After:");
+                // Debug.Log(position);
+                // Debug.Log(rotation);
+                // Debug.Log(scale);
+                // Debug.Log(tempMatrix);
+
                 tissueBlock.transform.position = position;
                 tissueBlock.transform.rotation = rotation;
                 tissueBlock.transform.localScale = scale;
